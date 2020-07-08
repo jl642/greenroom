@@ -144,6 +144,8 @@ I'm going to assume you know how to set file permissions and all that stuff in l
 
 Feel free to look up more about the [nginx configuration](https://www.nginx.com/resources/wiki/start/topics/examples/full/#nginx-conf).
 
+Please consider [securing your nginx video streams](https://blog.peer5.com/practical-approaches-for-securing-your-video-streams/) if you're going to run this in production!
+
 
 ## Todo
 
