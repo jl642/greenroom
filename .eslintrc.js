@@ -38,6 +38,7 @@ module.exports = {
     "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
     "react/jsx-one-expression-per-line": 0, // enforce this on case-by-case
     "react/jsx-props-no-spreading": 0,
+    "react/prop-types": 0,
     "react/prefer-stateless-function": 0,
     "import/extensions": 0,
     "no-console": ["error", { allow: ["warn", "error"]}]
