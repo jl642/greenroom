@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Grid, Input } from '@material-ui/core';
 
 import Main from './Main';
@@ -16,21 +16,33 @@ const App = () => {
 
   return (
     <div className="App">
-      <Grid
-        container
-        spacing={0}
-        direction="column"
-        alignItems="center"
-        justify="center"
-        style={{ minHeight: '100vh' }}
-      >
-        <Grid item>
-          <Main url={url} />
-        </Grid>
-        <Grid item>
-          <Input placeholder="URL" value={url} inputProps={{ 'aria-label': 'URL' }} onChange={handleChange} />
-        </Grid>
-      </Grid>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/room/:id">
+            <Grid
+              container
+              spacing={0}
+              direction="column"
+              alignItems="center"
+              justify="center"
+              style={{ minHeight: '100vh' }}
+            >
+              <Grid item>
+                <Main url={url} />
+              </Grid>
+              <Grid item>
+                <Input placeholder="URL" value={url} inputProps={{ 'aria-label': 'URL' }} onChange={handleChange} />
+              </Grid>
+            </Grid>
+          </Route>
+          <Route path="/" exact>
+            <div>Landing</div>
+          </Route>
+          <Route path="/">
+            <div>LoL 404</div>
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 };
